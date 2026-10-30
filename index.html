@@ -110,7 +110,7 @@ const tot=k=>{let a=0,b=0;SEC[k].f.forEach((_,i)=>{const[x,y]=cnt(k,i);a+=x;b+=y
 const pct=k=>{const[a,b]=tot(k);return Math.round(a/b*100)};
 const cur=()=>{const h=location.hash.slice(1);return SEC[h]?h:""};
 function msg(t,bad){ST=[t,bad];const e=document.getElementById("st");if(e){e.textContent=t;e.className="st"+(bad?" bad":"")}}
-const API="PASTE_URL_APPS_SCRIPT_DI_SINI";
+const API="https://script.google.com/macros/s/AKfycbyVNRRz_dsGrbBTnSyqqNMecRpy8AtsVnmhcu0yWhPtFtEbWiFl9L2scaLnPF0F8rggvQ/exec";
 const SHEET="PASTE_URL_GOOGLE_SHEET_DI_SINI";
 let pw="";try{pw=sessionStorage.getItem("semop_pw")||""}catch(e){}
 const meta=key=>{const m=/^([a-z]+)(\d+)_(\d+)$/.exec(key);if(!m||!SEC[m[1]])return{};const s=SEC[m[1]],f=s.f[+m[2]];return{b:s.t,f:f[1],d:f[2][+m[3]]}};
